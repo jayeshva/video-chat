@@ -19,9 +19,9 @@ const videoGrid = document.getElementById("video-grid");
 const myPeer = new Peer(undefined, {
     path: "/peerjs",
     host: "/",
-    port: "",
+    port: "10000",
 });
-var Peer_ID;
+var Peer_ID;    
 const myVideo = document.createElement("video");
 myVideo.muted = true;
 var myVideoStream;
@@ -394,16 +394,6 @@ meetingToggleBtn.addEventListener("click", (e) => {
     } else location.replace(`/`);
 });
 
-// copy text
-// const copyBtn = document.getElementById("copy");
-// copyBtn.addEventListener("mousedown", (e) => {
-//   const text = `https://digiclass.site/${ROOM_ID}`;
-//   navigator.clipboard.writeText(text);
-//   copyBtn.style.setProperty("--tooltip", '"copied"');
-// });
-// copyBtn.addEventListener("mouseout", (e) => {
-//   copyBtn.style.setProperty("--tooltip", '"copy"');
-// });
 const camToggleBtn = document.getElementById("cams-toggle");
 camToggleBtn.addEventListener("click", (e) => {
     myVideoStream.getTracks().forEach((track) => {
@@ -452,48 +442,6 @@ camToggleBtn.addEventListener("click", (e) => {
             console.log(error);
         });
 });
-// const changeCam = (e) => {
-//   myVideoStream.getTracks().forEach((track) => {
-//     track.stop();
-//   });
-//   var cams = e.getAttribute("camera");
-//   cams = JSON.parse(cams);
-//   // console.log(cams);
-//   var camId;
-//   for (cam in cams) {
-//     if (cams[cam] == false) {
-//       camId = cam;
-//       cams[cam] = true;
-//     } else {
-//       cams[cam] = false;
-//     }
-//   }
-//   e.setAttribute("camera", JSON.stringify(cams));
-//   navigator.mediaDevices
-//     .getUserMedia({
-//       video: { deviceId: { exact: camId } },
-//       audio: true,
-//     })
-//     .then((stream) => {
-//       myVideoStream = stream;
-//       let videoTrack = stream.getVideoTracks()[0];
-//       let audioTrack = stream.getAudioTracks()[0];
-//       myVideo.srcObject = stream;
-//       for (peer in peers) {
-//         let sender = peers[peer].peerConnection.getSenders().find(function (s) {
-//           return s.track.kind == videoTrack.kind;
-//         });
-//         sender.replaceTrack(videoTrack);
-//         sender = peers[peer].peerConnection.getSenders().find(function (s) {
-//           return s.track.kind == audioTrack.kind;
-//         });
-//         sender.replaceTrack(audioTrack);
-//       }
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// };
 
 const replaceVideoTrack = (stream, videoTrack) => {
     stream.removeTrack(stream.getVideoTracks()[0]);

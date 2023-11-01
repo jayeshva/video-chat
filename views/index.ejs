@@ -1,5 +1,5 @@
 <%- include('partials/header'); %>
-<div class="container py-5">
+<!-- <div class="container py-5">
     <div class="row g-3">
         <div class="col-md-6">
             <h1 class="mb-3">
@@ -23,7 +23,7 @@
                 </form>
             </div>
             <hr>
-            <p><a href="#" style="text-decoration: none;">Learn more about</a> S Meet</p>
+            <p><a href="#" style="text-decoration: none;">Learn more about</a> JAYS Meet</p>
         </div>
         <div class="col-md-6">
             <div class="card" style="box-shadow: 0 0 5px #b8b8b8;">
@@ -34,3 +34,137 @@
         </div>
     </div>
 </div>
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Meeting - Premium Video Meetings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .input-group {
+            margin-top: 20px;
+        }
+
+        .input-group-text {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .form-control {
+            border-radius: 0 5px 5px 0;
+        }
+
+        .btn-outline-primary {
+            border-color: #007bff;
+            color: #007bff;
+            border-radius: 0 5px 5px 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+            margin: 30px 0;
+        }
+
+        footer {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Premium Video Meetings. Now Free for Everyone.</h1>
+                <p>We've re-engineered the service to make secure cloud meetings free and available for all.</p>
+                <div class="my-4">
+                    <a class="btn btn-primary new-meeting" href="/new-meeting" role="button">Start a New Meeting</a>
+                    <form action="join-room" style="margin-left: 1rem;" method="POST">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <ion-icon name="planet-outline"></ion-icon>
+                            </span>
+                            <input name="room_id" type="text" class="form-control" placeholder="Enter a code or Link" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-primary" type="submit" id="button-addon2">Join</button>
+                        </div>
+                    </form>
+                </div>
+                <hr>
+                <p><a href="#" style="text-decoration: none;">Learn more about</a> Cloud Meeting</p>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="box-shadow: 0 0 5px #b8b8b8;">
+                    <div class="card-body">
+                        <img src="/images/ss.png" width="100%" class="rounded" alt="Meeting Screenshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2023 Cloud Meeting. All Rights Reserved.
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid nav-contcnt">
         <a class="navbar-brand" href="#" style="color: #5F6368;"> <span style="font-weight: bold;">S</span> Meet</a>
         <div class="d-flex align-items-center">
@@ -27,4 +27,87 @@
             </a>
         </div>
     </div>
-</nav>
+</nav> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Meeting - Premium Video Meetings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #5F6368;
+            font-size: 24px;
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-info {
+            font-weight: bold;
+            color: #5F6368;
+            margin: 0;
+            padding: 0 10px;
+            font-size: 18px;
+        }
+
+        .icon {
+            color: #5F6368;
+            font-size: 24px;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .icon:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid nav-content">
+            <a class="navbar-brand" href="#"> <span>JAYS</span> Meet</a>
+            <div class="user-info">
+                <%= user.name %>
+            </div>
+            <a class="icon" href="#">
+                <span class="material-icons-outlined">
+                    help_outline
+                </span>
+            </a>
+            <a class="icon" href="#">
+                <span class="material-icons-outlined">
+                    info
+                </span>
+            </a>
+            <a class="icon" href="#">
+                <span class="material-icons-outlined">
+                    settings
+                </span>
+            </a>
+            <a class="icon" href="/logout">
+                <span class="material-icons-outlined">
+                    logout
+                </span>
+            </a>
+        </div>
+    </nav>
+</body>
+</html>
